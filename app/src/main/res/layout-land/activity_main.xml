@@ -8,51 +8,51 @@
 
     <Button
         android:id="@+id/buttonNeg"
-        android:layout_width="94dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="Neg"
         app:iconTint="#FFFFFF"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonClear"
-        app:layout_constraintStart_toEndOf="@+id/buttonClear"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonMultiply"
+        app:layout_constraintEnd_toEndOf="@+id/buttonClear"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiply"
         app:rippleColor="#FFEB3B" />
 
     <Button
         android:id="@+id/buttonClear"
-        android:layout_width="94dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
         android:minWidth="48dp"
         android:text="Clear"
         app:iconTint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/button0"
-        app:layout_constraintTop_toBottomOf="@+id/button0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button9"
+        app:layout_constraintStart_toEndOf="@+id/button9"
         app:rippleColor="#FFEB3B" />
 
     <EditText
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteY="24dp" />
 
     <EditText
         android:id="@+id/newNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="218dp"
+        android:layout_height="44dp"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/result" />
+        tools:layout_editor_absoluteY="25dp" />
 
     <TextView
         android:id="@+id/Operation"
@@ -60,8 +60,9 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/newNumber"
-        app:layout_constraintEnd_toStartOf="@+id/newNumber"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/result"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toEndOf="@+id/newNumber" />
 
     <Button
         android:id="@+id/button0"
@@ -224,5 +225,12 @@
         android:text="="
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonDot"
         app:layout_constraintStart_toEndOf="@+id/buttonDot" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="386dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
